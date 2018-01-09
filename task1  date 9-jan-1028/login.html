@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+ {
+  box-sizing: border-box;
+}
+.foot
+	{background-color:#E333FF;
+		position:absolute;
+		width:100%;
+		height:50px;
+		bottom:0;
+		font-size:40px;
+		
+		border:2px solid green;
+	
+	}
+.menu {
+  float:left;
+  width:20%;
+  text-align:center;
+}
+.menuitem {
+  background-color:#e5e5e5;
+  padding:8px;
+  margin-top:7px;
+}
+.menuitem:hover
+{
+ background-color:#E333FF
+}
+background-color:#e5e5e5;
+}
+.main {
+  float:center;
+  width:60%;
+  padding:0 20px;
+}
+.right {
+  background-color:#e5e5e5;
+  float:left;
+  width:20%;
+  padding:15px;
+  margin-top:7px;
+  text-align:center;
+}
+
+
+</style>
+</head>
+<body style="font-family:Verdana;color:#1222C4;">
+
+<div style="background-color:#E333FF;padding:15px;text-align:center;">
+  <h1>NIIT SURAT</h1>
+</div>
+
+<div style="overflow:auto">
+  <div class="menu">
+    <div class="menuitem"><a href="home.html">Home</a></div>
+    <div class="menuitem"><a href="login.html">Login</a></div>
+    <div class="menuitem"><a href="product.html">product</a></div>
+    <div class="menuitem"><a href="#">About us</a></div>
+  </div>
+  <div class="main">
+  <form>
+					<table>
+						<tr>
+							<td>User Name : </td>
+							<td>
+							<input type="text" id="uname"/>
+							</td>
+							
+						</tr>
+						<tr>
+							<td>Password : </td><td><input type="password" id="upass"/></td>
+						</tr>
+						<tr>
+							<td colspan="2" style="text-align: center"><input type="button" value="LogIn" onclick="validate()"></td>
+						</tr>
+					</table>
+				</form>
+
+  
+<div class="foot">
+<marquee>@copyright by NIIT Surat</marquee>
+</div>
+
+
+</body>
+<script type="text/javascript">
+	function validate(){
+		 if((document.getElementById("uname").value=="nayan")&&(document.getElementById("upass").value=="nayan123")){
+			alert("Welcome User");
+			window.location="product.html";
+			
+		}
+		 else {
+			 alert("Invalid user id or password");
+			
+		}  
+	}
+</script>
+
+</html>

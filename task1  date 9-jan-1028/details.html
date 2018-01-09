@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+	function getData(){
+		var locate = window.location;
+		document.joe.burns.value = locate;
+		var text = document.joe.burns.value;
+		
+		/*alert("Product Id is " +getProductId(text));
+		alert("Product Name is : "+getProductName(text,theleft))
+		alert("Product Price is " +getProductPrice(text,theleft));
+		alert("Product Quantity is : "+getProductQuantity(text,theleft))*/
+		
+		var id=getProductId(text);
+		var name=getProductName(text,theleft);
+		var price=getProductPrice(text,theleft);
+		var quantity=getProductQuantity(text);
+		
+		document.getElementById("pid").innerHTML=id;
+		document.getElementById("pname").innerHTML=name;
+		document.getElementById("pprice").innerHTML=price;
+		document.getElementById("pquantity").innerHTML=quantity;
+		
+	}
+	function getProductId(str)
+	{
+		alert
+		theleft = str.indexOf("=") + 1;
+		theright = str.indexOf("&&");
+	return(str.substring(theleft, theright));
+	}
+	function getProductName(str,startIndex){
+		alert
+		theleft = str.indexOf("=",startIndex) + 1;  
+		theright = str.indexOf("&&",theleft);
+		return(str.substring(theleft, theright));
+	}
+	function getProductPrice(str,startIndex){
+		alert
+		theleft = str.indexOf("=",startIndex) + 1;  
+		theright = str.indexOf("&&",theleft);
+		return(str.substring(theleft, theright));
+	}
+	function getProductQuantity(str){
+		alert
+		theleft = str.lastIndexOf("=")+1 ;  
+		return(str.substring(theleft,str.length));
+	}
+	
+</script>
+<style>
+ {
+  box-sizing: border-box;
+}
+.foot
+	{background-color:#E333FF;
+		position:absolute;
+		width:100%;
+		height:50px;
+		bottom:0;
+		font-size:40px;
+		
+		border:2px solid green;
+	
+	}
+.menu {
+  float:left;
+  width:20%;
+  text-align:center;
+}
+.menuitem {
+  background-color:#e5e5e5;
+  padding:8px;
+  margin-top:7px;
+}
+.menuitem:hover
+{
+ background-color:#E333FF
+}
+background-color:#e5e5e5;
+}
+.main {
+  float:left;
+  width:60%;
+  padding:0 20px;
+}
+.right {
+  background-color:#e5e5e5;
+  float:left;
+  width:20%;
+
+  padding:15px;
+  margin-top:7px;
+  text-align:center;
+}
+
+
+</style>
+</head>
+<body style="font-family:Verdana;color:#1222C4;" onload="getData()">
+
+<div style="background-color:#E333FF;padding:15px;text-align:center;">
+  <h1>NIIT SURAT</h1>
+</div>
+
+<div style="overflow:auto">
+  <div class="menu">
+    <div class="menuitem"><a href="home.html">Home</a></div>
+    <div class="menuitem"><a href="login.html">Login</a></div>
+    <div class="menuitem"><a href="product.html">product</a></div>
+    <div class="menuitem"><a href="#">About us</a></div>
+  </div>
+
+  <div class="main">
+<br>
+  <center><h1>-:Product Details:- </h1><center>
+<FORM NAME="joe">
+			<INPUT TYPE="hidden" NAME="burns">
+		</FORM>
+		
+		    <h1>Product Details :-</h1>
+				<table>
+					<tr>
+						<td>Product Id : </td>
+						<td>
+							<div id="pid"></div>
+						</td>
+					</tr>
+					<tr>
+						<td>Product Name : </td>
+						<td><div id="pname"></div></td>
+					</tr>
+					<tr>
+						<td>Product Price : </td>
+						<td><div id="pprice"></div></td>
+					</tr>
+					<tr>
+						<td>Product Quantity : </td>
+						<td><div id="pquantity"></div></td>
+					</tr>
+				</table>
+	 	
+		</section>
+		
+  </div>
+
+  
+<div class="foot">
+<marquee>@copyright by NIIT Surat</marquee>
+</div>
+
+
+</body>
+</html>
