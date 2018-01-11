@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+ {
+  box-sizing: border-box;
+}
+img {
+ opacity: 1.0;
+    padding: 5px;
+width:400;
+ height:400;
+ 	    border: 10px solid yellowgreen;
+
+float:left
+
+}
+p
+{
+
+position:relative;
+	top:30px;
+	left:30px;
+	font-size:40px;
+	color:red;
+
+}
+.foot
+	{background-color:#E333FF;
+		position:absolute;
+		width:100%;
+		height:50px;
+		bottom:0;
+		font-size:40px;
+		
+		border:2px solid green;
+	
+	}
+
+background-color:#e5e5e5;
+}
+.main {
+  float:left;
+  width:60%;
+  padding:0 20px;
+}
+.right {
+  background-color:#e5e5e5;
+  float:left;
+  width:20%;
+  padding:15px;
+  margin-top:7px;
+  text-align:center;
+}
+
+
+float:left
+
+}
+p
+{
+
+position:relative;
+	top:30px;
+	left:30px;
+	font-size:40px;
+	color:red;
+
+}
+
+
+</style>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#bt").click(function(){
+       
+	    $("#n").toggle();
+		
+    });
+});
+
+
+
+
+$(document).ready(function(){
+    $("#ib").click(function(){
+        $(img).animate({           
+            height: '+=20px',
+            width: '+=20px',
+              });
+        $(img).css("opacity", "0.5");
+    });
+});
+</script>
+
+
+
+</head>
+<body style="font-family:Verdana;color:#1222C4;">
+
+<div style="background-color:#E333FF;padding:15px;text-align:center;">
+  <h1>NIIT SURAT</h1>
+</div>
+
+
+
+  <div class="main">
+
+ <img src="im1.jpg" id="img">
+ <p id="n">this is the NIIT surat center We decided to partner with NIIT for a number of reasons. However, what stood out most was their commitment to timely deliveries and expertise in training. NIIT successfully executed plans, allowing us to exceed</p>
+  </div>
+
+<br><br><br><br><br><br><br><br><br><br>
+<button id="ib">Click Me</button>&nbsp;<button id="bt">click me to hide and show paragraph</button>
+
+  
+<div class="foot">
+<marquee>@copyright by NIIT Surat</marquee>
+</div>
+
+
+</body>
+</html>
